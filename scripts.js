@@ -19,6 +19,13 @@ numButtons.forEach(button => {
         }
     })
 })
+const operatorButtons = document.querySelectorAll('.operators');
+operatorButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        secondary = true;
+        operator = e.target.textContent;
+    })
+})
 
 function updateDisplay(newDisplay){
     displayContainer.textContent = newDisplay;
