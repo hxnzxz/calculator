@@ -11,7 +11,9 @@ displayContainer.textContent = display;
 const equals = document.querySelector('#eq');
 equals.addEventListener('click', () => {
     if(operator == null || opperand2 === ""){
-        updateDisplay(opperand1);
+        if(opperand1 !== ""){
+            updateDisplay(opperand1);
+        }
     }else{
         operate();
         updateDisplay(display);
@@ -81,6 +83,7 @@ function operate(){
                 hax = true;
             }else{
                 opperand1 = +opperand1 / +opperand2;
+                opperand1 = Math.round((opperand1 + Number.EPSILON) * 100) / 100;
                 opperand1 = opperand1.toString();
                 display = opperand1;
             }
