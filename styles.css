@@ -1,0 +1,36 @@
+#calculator {
+    display: flex;
+    background-color: grey;
+    width: 600px;
+    height: 800px;
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center ;
+}
+
+#display {
+    border: 2px solid black;
+    width: 500px;
+    height: 100px;
+    background-color: lightgray;
+    font-size: 90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    display: flex;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+}
